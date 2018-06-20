@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Exo');
+body {
+  font-family: 'Exo', sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+ svg {
+     margin: 10em auto;
+     height: auto;
+     width: auto;
+     filter: drop-shadow( 5px 5px 5px #000 );
+}
+ .my-name {
+     display: grid;
+     margin: auto;
+     grid-template-columns: auto;
+}
+ .moe {
+     stroke: #000;
+     stroke-width:2;
+     fill: none;
+     stroke-dasharray: 512;
+     stroke-dashoffset: 512;
+     transition: all 3s;
+     animation: draw 2s linear .5s forwards,  fade 4s linear 3.5s forwards;
+}
+ .himed {
+     stroke: #000;
+     stroke-width:2;
+     fill: none;
+     stroke-dasharray: 512;
+     stroke-dashoffset: 512;
+     transition: all 3s;
+     animation: draw-next 2s linear 2s forwards, fade 4s linear 3.5s forwards;
+}
+.float {
+         animation: float 3s linear 2s forwards;
+         transition: all 4s;
+         opacity: 0;
+
+}
+ @keyframes draw {
+     100% {
+         stroke-dashoffset: 0;
+
+    }
+}
+ @keyframes draw-next {
+     100% {
+         stroke-dashoffset: 0;
+    }
+}
+ @keyframes fade {
+     from {
+         fill: #fff;
+    }
+     to {
+         fill: #019DE4;
+;
+    }
+}
+ @keyframes float {
+     from {
+          transform: translateY(200px);
+          opacity: 0;
+    }
+     to {
+          transform: translateY(0px);
+          opacity: 1
+    }
+}
