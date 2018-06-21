@@ -1,70 +1,71 @@
 @import url('https://fonts.googleapis.com/css?family=Exo');
+
 body {
   font-family: 'Exo', sans-serif;
 }
-
-.App {
+.grid-container {
   text-align: center;
+  display: grid;
+  grid-template-columns: auto auto;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.header-img {
+  width: 50%;
+  margin: 8em 5em;
+  animation: float 1.5s ease forwards;
 }
 
-.App-header {
-  padding: 20px;
-  color: white;
+svg {
+   margin: 10em 5em;
+   height: auto;
+   width: auto;
+   filter: drop-shadow( 5px 5px 5px #000 );
 }
-
-.App-title {
-  font-size: 1.5em;
+.my-name {
+   display: grid;
+   margin: auto;
+   grid-template-columns: auto;
 }
-
-.App-intro {
-  font-size: large;
+.moe {
+   stroke: #000;
+   stroke-width:2;
+   fill: none;
+   stroke-dasharray: 512;
+   stroke-dashoffset: 512;
+   transition: all 3s;
+   animation: draw 2s linear .5s forwards,  fade 4s linear 3.5s forwards;
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
- svg {
-     margin: 10em auto;
-     height: auto;
-     width: auto;
-     filter: drop-shadow( 5px 5px 5px #000 );
-}
- .my-name {
-     display: grid;
-     margin: auto;
-     grid-template-columns: auto;
-}
- .moe {
-     stroke: #000;
-     stroke-width:2;
-     fill: none;
-     stroke-dasharray: 512;
-     stroke-dashoffset: 512;
-     transition: all 3s;
-     animation: draw 2s linear .5s forwards,  fade 4s linear 3.5s forwards;
-}
- .himed {
-     stroke: #000;
-     stroke-width:2;
-     fill: none;
-     stroke-dasharray: 512;
-     stroke-dashoffset: 512;
-     transition: all 3s;
-     animation: draw-next 2s linear 2s forwards, fade 4s linear 3.5s forwards;
+.himed {
+   stroke: #000;
+   stroke-width:2;
+   fill: none;
+   stroke-dasharray: 512;
+   stroke-dashoffset: 512;
+   transition: all 3s;
+   animation: draw-next 2s linear 2s forwards, fade 4s linear 3.5s forwards;
 }
 .float {
-         animation: float 3s linear 2s forwards;
-         transition: all 4s;
-         opacity: 0;
+   animation: float 3s linear 2s forwards;
+   transition: all 4s;
+   opacity: 0;
 
 }
+
+/* Media  Queries */
+@media screen and (max-width: 767px) {
+  svg {
+    margin: 0em auto;
+  }
+  .grid-container {
+     grid-template-columns: auto  ;
+  }
+  .header-img {
+      margin: 2em;
+  }
+}
+ 
+
+/* Animation Keyframes */
  @keyframes draw {
      100% {
          stroke-dashoffset: 0;
