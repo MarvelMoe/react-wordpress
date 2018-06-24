@@ -50,6 +50,14 @@ svg {
    opacity: 0;
 
 }
+.mybody-wrapper {
+  text-align: center;
+  margin: 0 auto;
+}
+.mybody {
+  display: grid;
+  grid-template-columns: auto auto;
+}
 
 /* Media  Queries */
 @media screen and (max-width: 767px) {
